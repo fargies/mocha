@@ -28,6 +28,7 @@ describe('a test that throws', function () {
 
   describe('extensible', function () {
     it('should not crash if throwing non-extensible type', function (done) {
+      /* eslint-disable-next-line no-unused-vars */
       var test = new Test('im async and throw string async', function (done2) {
         process.nextTick(function () {
           throw 'error';
@@ -60,6 +61,7 @@ describe('a test that throws', function () {
     });
 
     it('should not pass if throwing sync and test is async', function (done) {
+      /* eslint-disable-next-line no-unused-vars */
       var test = new Test('im async and throw undefined sync', function (done2) {
         throw undefined;
       });
@@ -74,6 +76,7 @@ describe('a test that throws', function () {
     });
 
     it('should not pass if throwing async and test is async', function (done) {
+      /* eslint-disable-next-line no-unused-vars */
       var test = new Test('im async and throw undefined async', function (done2) {
         process.nextTick(function () {
           throw undefined;
@@ -106,6 +109,7 @@ describe('a test that throws', function () {
     });
 
     it('should not pass if throwing sync and test is async', function (done) {
+      /* eslint-disable-next-line no-unused-vars */
       var test = new Test('im async and throw null sync', function (done2) {
         throw null;
       });
@@ -120,6 +124,7 @@ describe('a test that throws', function () {
     });
 
     it('should not pass if throwing async and test is async', function (done) {
+      /* eslint-disable-next-line no-unused-vars */
       var test = new Test('im async and throw null async', function (done2) {
         process.nextTick(function () {
           throw null;
